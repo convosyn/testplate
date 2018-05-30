@@ -27,10 +27,10 @@ def parseIt(info, index = 1):
 
 def index(request):
     context = {}
-    parseIt(request.META)
+    #parseIt(request.META)
     #print(dir(request))
     #print(dir(request),file = open('tmpall.txt'))
-    print(type(request))
+    #print(type(request))
     if request.user.is_authenticated:
         context['user'] = request.user
     context['article_list'] = Article.objects.all()[:4]
